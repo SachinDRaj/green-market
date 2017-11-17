@@ -6,6 +6,7 @@ import { HomePage } from '../home/home';
 import { SupportPage } from '../support/support';
 
 
+
 @Component({
   templateUrl: 'tabs.html'
 })
@@ -15,7 +16,6 @@ export class TabsPage {
   tab2Root = AboutPage;
   tab3Root = ContactPage;
   tab4Root = SupportPage;
-
 
   constructor() {
 

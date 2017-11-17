@@ -10,6 +10,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SupportPage } from '../pages/support/support';
+import { ModalContentPage } from '../pages/support/support';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SupportPage } from '../pages/support/support';
     AboutPage,
     ContactPage,
     TabsPage,
-    SupportPage
+    SupportPage,
+    ModalContentPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { SupportPage } from '../pages/support/support';
     AboutPage,
     ContactPage,
     TabsPage,
-    SupportPage
+    SupportPage,
+    ModalContentPage
   ],
   providers: [
     StatusBar,
