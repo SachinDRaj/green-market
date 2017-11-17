@@ -4,22 +4,40 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
+<ion-content padding class="body1">
+  <ion-img width="308" height="80" src="src/assets/imgs/logo2.png"></ion-img>
+  <ion-slides>
+    <ion-slide>
+      <h1>Slide 1</h1>
+      <ion-img src="logo2.png"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+      <ion-img src="logo2.png"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+      <ion-img src="logo2.png"></ion-img>
+    </ion-slide>
+  </ion-slides>
+
+  <p class="header1">
+    Enjoy the ambience of the lush Santa Cruz Valley. Taste and savour delicious local food. Meet the people who grow your food as well as your friends and family. Experience the creativity of local artisans.
+    Improve your quality of life.
   </p>
 
-  <ion-tabs>
-    <ion-tab tabIcon="heart" [root]="tab1"></ion-tab>
-    <ion-tab tabIcon="star" [root]="tab2"></ion-tab>
-  </ion-tabs>
+  <div class="b1">
+    <button ion-button color="light" outline class="b1">Learn More</button>
+  </div>
 
+  <ion-slides>
+    <ion-slide>
+      <h1>Living Green Blog</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>About Ecosophy</h1>
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>
 
