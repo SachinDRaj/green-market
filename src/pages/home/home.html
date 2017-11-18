@@ -4,19 +4,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="body1">
-  <ion-img width="308" height="80" src="assets/imgs/logo2.png"></ion-img>
+<ion-content>
+  <!-- <ion-img class="img1" src="assets/imgs/logo2.png"></ion-img>
+
+
   <ion-slides>
     <ion-slide>
-      <ion-img src="assets/imgs/logo2.png"></ion-img>
+      <ion-img class="img2" src="assets/imgs/pic1.jpg"></ion-img>
     </ion-slide>
     <ion-slide>
-      <!-- <h1>Slide 2</h1> -->
-      <ion-img src="assets/imgs/logo2.png"></ion-img>
-    </ion-slide>
-    <ion-slide>
-      <!-- <h1>Slide 3</h1> -->
-      <ion-img src="assets/imgs/logo2.png"></ion-img>
+      <ion-img class="img3" src="assets/imgs/pic2.jpeg"></ion-img>
     </ion-slide>
   </ion-slides>
 
@@ -36,7 +33,33 @@
     <ion-slide>
       <h1>About Ecosophy</h1>
     </ion-slide>
-  </ion-slides>
+  </ion-slides> -->
+
+  <ion-slides pager>
+
+  <ion-slide class="bodyH">
+    <ion-img class="img1" src="assets/imgs/logo2.png"></ion-img>
+    <br><br>
+    <p class="header1"><b>
+      Enjoy the ambience of the lush Santa Cruz Valley. Taste and savour delicious local food. Meet the people who grow your food as well as your friends and family. Experience the creativity of local artisans.
+      Improve your quality of life.
+      </b>
+    </p>
+    <br>
+    <div class="b1">
+      <button ion-button color="light" outline class="b1">View Web Page</button>
+    </div>
+  </ion-slide>
+
+  <ion-slide style="background-color: blue">
+    <h2>Slide 2</h2>
+  </ion-slide>
+
+  <ion-slide style="background-color: red">
+    <h2>Slide 3</h2>
+  </ion-slide>
+
+</ion-slides>
 
 </ion-content>
 

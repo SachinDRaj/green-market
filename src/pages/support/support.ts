@@ -38,9 +38,9 @@ export class ModalContentPage {
         quote: 'Sneaky little hobbitses!',
         image: 'assets/img/avatar-gollum.jpg',
         items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'River Folk' },
-          { title: 'Alter Ego', note: 'Smeagol' }
+          { title: 'Time', note: '8:15 pm' },
+          { title: 'Date', note: '17-03-2017' },
+          { title: 'Description', note: 'Smeagol' }
         ]
       },
       {
@@ -48,9 +48,9 @@ export class ModalContentPage {
         quote: 'Go back, Sam! I\'m going to Mordor alone!',
         image: 'assets/img/avatar-frodo.jpg',
         items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Weapon', note: 'Sting' }
+          { title: 'Time', note: '9:20 am' },
+          { title: 'Date', note: '09-12-2017' },
+          { title: 'Discription', note: 'Sting' }
         ]
       },
       {
@@ -58,9 +58,9 @@ export class ModalContentPage {
         quote: 'What we need is a few good taters.',
         image: 'assets/img/avatar-samwise.jpg',
         items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Nickname', note: 'Sam' }
+          { title: 'Time', note: '11:00 am' },
+          { title: 'Date', note: '11-09-2017' },
+          { title: 'Description', note: 'Sam' }
         ]
       }
     ];

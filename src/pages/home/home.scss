@@ -3,10 +3,48 @@ page-home {
 
 p.header1{
   text-align: center;
+  z-index: 2;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+  text-decoration-color: white;
 }
 .b1{
   text-align: center;
+  z-index: 2;
+}
+.bodyH{
+  // background-color: #F1FBE6;
+  background: url(../assets/imgs/pic1.jpg);
+  z-index: 1;
+  opacity: 0.9;
+  // position: relative;
 }
 .body1{
-  background-color: #F4FCEB;
+  background-color: #F1FBE6;
+}
+
+.img1{
+
+  height: 100px;
+  z-index: 2;
+  // background-color: #F1FBE6;
+  // border: solid;
+}
+
+.img2{
+  background-color: #F1FBE6;
+  opacity: 0.8;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+}
+
+.img3{
+  background-color: #F1FBE6;
+  margin-left: 10px;
+  opacity: 0.8;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
 }

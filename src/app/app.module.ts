@@ -7,7 +7,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SupportPage } from '../pages/support/support';
 import { ModalContentPage } from '../pages/support/support';
@@ -17,7 +16,6 @@ import { ModalContentPage } from '../pages/support/support';
     MyApp,
     HomePage,
     AboutPage,
-    ContactPage,
     TabsPage,
     SupportPage,
     ModalContentPage
@@ -31,7 +29,6 @@ import { ModalContentPage } from '../pages/support/support';
     MyApp,
     HomePage,
     AboutPage,
-    ContactPage,
     TabsPage,
     SupportPage,
     ModalContentPage
