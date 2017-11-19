@@ -34,33 +34,33 @@ export class ModalContentPage {
   ) {
     var characters = [
       {
-        name: 'Gollum',
-        quote: 'Sneaky little hobbitses!',
+        name: 'Tomatoes',
+        quote: 'Tomatoes not Potatoes',
         image: 'assets/img/avatar-gollum.jpg',
         items: [
           { title: 'Time', note: '8:15 pm' },
           { title: 'Date', note: '17-03-2017' },
-          { title: 'Description', note: 'Smeagol' }
+          { title: 'Description', note: 'Now $15 a pound.' }
         ]
       },
       {
-        name: 'Frodo',
-        quote: 'Go back, Sam! I\'m going to Mordor alone!',
+        name: 'Sweet Pepper',
+        quote: 'Sweetest Pepper ever!',
         image: 'assets/img/avatar-frodo.jpg',
         items: [
           { title: 'Time', note: '9:20 am' },
           { title: 'Date', note: '09-12-2017' },
-          { title: 'Discription', note: 'Sting' }
+          { title: 'Discription', note: 'Now $10 a pound' }
         ]
       },
       {
-        name: 'Samwise Gamgee',
-        quote: 'What we need is a few good taters.',
+        name: 'Onion',
+        quote: 'Sour Onion',
         image: 'assets/img/avatar-samwise.jpg',
         items: [
           { title: 'Time', note: '11:00 am' },
           { title: 'Date', note: '11-09-2017' },
-          { title: 'Description', note: 'Sam' }
+          { title: 'Description', note: 'Now $12 a pound' }
         ]
       }
     ];
