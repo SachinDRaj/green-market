@@ -5,58 +5,110 @@
 </ion-header>
 
 <ion-content>
-  <!-- <ion-img class="img1" src="assets/imgs/logo2.png"></ion-img>
-
-
-  <ion-slides>
-    <ion-slide>
-      <ion-img class="img2" src="assets/imgs/pic1.jpg"></ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img class="img3" src="assets/imgs/pic2.jpeg"></ion-img>
-    </ion-slide>
-  </ion-slides>
-
-  <p class="header1">
-    Enjoy the ambience of the lush Santa Cruz Valley. Taste and savour delicious local food. Meet the people who grow your food as well as your friends and family. Experience the creativity of local artisans.
-    Improve your quality of life.
-  </p>
-
-  <div class="b1">
-    <button ion-button color="light" outline class="b1">View Web Page</button>
-  </div>
-
-  <ion-slides>
-    <ion-slide>
-      <h1>Living Green Blog</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>About Ecosophy</h1>
-    </ion-slide>
-  </ion-slides> -->
-
   <ion-slides pager>
 
+  <!-- first slide -->
   <ion-slide class="bodyH">
     <ion-img class="img1" src="assets/imgs/logo2.png"></ion-img>
     <br><br>
     <p class="header1"><b>
       Enjoy the ambience of the lush Santa Cruz Valley. Taste and savour delicious local food. Meet the people who grow your food as well as your friends and family. Experience the creativity of local artisans.
-      Improve your quality of life.
+
       </b>
     </p>
+    <p><b>Improve your quality of life.</b></p>
     <br>
-    <div class="b1">
+    <div>
       <button ion-button color="light" outline class="b1">View Web Page</button>
     </div>
   </ion-slide>
 
-  <ion-slide style="background-color: blue">
-    <h2>Slide 2</h2>
+  <ion-slide class="bodyH4">
+    <div class="info1">
+      <h2><b>
+        Saturday Green Market
+        </b>
+      </h2>
+      <p><b>The Farmers and Artisans Market in the Garden.</b></p>
+      <p><b>6am - 1pm (rain or shine)</b></p>
+      <a class="link1" href="https://www.w3schools.com/html/">Learn More</a>
+    </div>
+    <br>
+    <div class="info1">
+      <h2><b>
+        Sunday Breakfast Brunch Experience
+        </b>
+      </h2>
+      <p><b>Vendor Operated</b></p>
+      <p><b>7am - noon (rain or shine)</b></p>
+      <a class="link1" href="https://www.w3schools.com/html/">Learn More</a>
+    </div>
   </ion-slide>
 
-  <ion-slide style="background-color: red">
-    <h2>Slide 3</h2>
+  <!-- second slide -->
+  <ion-slide class="bodyH2">
+    <h2 class="quote"><b><em>QUOTES</em></b></h2>
+    <!-- <hr> -->
+    <ion-card>
+      <ion-card-content class="card">
+        <p>"Make a visit, buy a local you will be pleasantly surprised."</p>
+        <p>-Elizabeth Fonrose</p>
+
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+
+      <ion-card-content class="card">
+        <p>"Today was my first visit and loved it.Must visit again."</p>
+        <p>-Orville Lewis</p>
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+
+      <ion-card-content class="card">
+        <p>"One of the most enchanting places to be! It is a most pleasant experience! A must-visit!"</p>
+        <p>-Azhar Ali</p>
+      </ion-card-content>
+
+    </ion-card>
+    <!-- <ion-card>
+
+      <ion-card-content class="card">
+        <p>"Fresh, local, family friendly.Just getting there is a part of the experience."</p>
+        <p>-Tracy Cox</p>
+      </ion-card-content>
+
+    </ion-card> -->
+  </ion-slide>
+
+
+  <!-- third slide -->
+  <ion-slide class="bodyH3">
+    <ion-img class="insta" src="assets/imgs/insta2.png"></ion-img>
+
+    <ion-grid class="grid1">
+      <ion-row>
+        <ion-col>
+          <ion-img class="img3" src="assets/imgs/pic3.jpeg"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img class="img4" src="assets/imgs/pic4.jpeg"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-img class="img5" src="assets/imgs/pic5.jpeg"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-img class="img6" src="assets/imgs/pic6.jpeg"></ion-img>
+        </ion-col>
+      </ion-row>
+      <div>
+        <button ion-button color="light" outline class="b2">FOLLOW GREEN MARKET TT</button>
+      </div>
+    </ion-grid>
   </ion-slide>
 
 </ion-slides>
