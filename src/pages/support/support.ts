@@ -5,6 +5,7 @@ import { ModalController, Platform, NavParams, ViewController } from 'ionic-angu
 // import { ModalContentPage } from 'modalContent';
 
 declare var firebase: any;
+var notes = [];
 
 @Component({
   selector: 'page-support',
@@ -12,9 +13,9 @@ declare var firebase: any;
 })
 
 export class SupportPage {
-  notes = [];
+  items = [];
   constructor(public modalCtrl: ModalController,public navCtrl: NavController) {
-
+    this.items = notes
   }
 
   openModal(characterNum) {
@@ -29,21 +30,21 @@ export class SupportPage {
   //     profile_picture : imageUrl
   //   });
   // }
+
   ngOnInit(){
     this.fbGetData();
   }
 
   fbGetData(){
     firebase.database().ref('/').on('child_added',(snapshot) => {
-      this.notes.push(snapshot.val())
-      // console.log(snapshot)
-      console.log(this.notes)
+      notes.push(snapshot.val())
+      console.log(notes)
     })
   }
 
-  fbPostData(notes,item){
-    firebase.database().ref('/').push({name: name, belt: belt});
-  }
+  // fbPostData(notes,item){
+  //   firebase.database().ref('/').push({name: name, belt: belt});
+  // }
 
 }
 
@@ -53,45 +54,11 @@ export class SupportPage {
 export class ModalContentPage {
   character;
 
-  constructor(
-    public platform: Platform,
-    public params: NavParams,
-    public viewCtrl: ViewController
-  ) {
-    var characters = [
-      {
-        name: 'Tomatoes',
-        quote: 'Tomatoes not Potatoes',
-        image: 'assets/img/avatar-gollum.jpg',
-        items: [
-          { title: 'Time', note: '8:15 pm' },
-          { title: 'Date', note: '17-03-2017' },
-          { title: 'Description', note: 'Now $15 a pound.' }
-        ]
-      },
-      {
-        name: 'Sweet Pepper',
-        quote: 'Sweetest Pepper ever!',
-        image: 'assets/img/avatar-frodo.jpg',
-        items: [
-          { title: 'Time', note: '9:20 am' },
-          { title: 'Date', note: '09-12-2017' },
-          { title: 'Discription', note: 'Now $10 a pound' }
-        ]
-      },
-      {
-        name: 'Onion',
-        quote: 'Sour Onion',
-        image: 'assets/img/avatar-samwise.jpg',
-        items: [
-          { title: 'Time', note: '11:00 am' },
-          { title: 'Date', note: '11-09-2017' },
-          { title: 'Description', note: 'Now $12 a pound' }
-        ]
-      }
-    ];
-    this.character = characters[this.params.get('charNum')];
+  constructor(public platform: Platform,public params: NavParams,public viewCtrl: ViewController) {
+
+    this.character = notes[this.params.get('charNum')];
   }
+
 
   dismiss() {
     this.viewCtrl.dismiss();

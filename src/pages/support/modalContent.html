@@ -15,15 +15,29 @@
 <ion-content>
   <ion-list>
       <ion-item>
-        <h2>{{character.name}}</h2>
-        <p>{{character.quote}}</p>
+        <h2>{{character.Name}}</h2>
+        <p>{{character.Quote}}</p>
       </ion-item>
 
-      <ion-item *ngFor="let item of character['items']">
-        {{item.title}}
+      <ion-item>
+        Date
         <ion-note item-end>
-          {{item.note}}
+          {{character.Date}}
+        </ion-note>
+      </ion-item>
+      <ion-item>
+        Time
+        <ion-note item-end>
+          {{character.Time}}
+        </ion-note>
+      </ion-item>
+      <ion-item>
+        Description
+        <ion-note item-end>
+          {{character.Description}}
         </ion-note>
       </ion-item>
   </ion-list>
 </ion-content>
+
+<!-- *ngFor="let item of character['items']" -->

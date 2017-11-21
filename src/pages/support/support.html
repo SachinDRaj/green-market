@@ -12,30 +12,24 @@
 </ion-header>
 <br>
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let item of items; let i=index">
       <!-- <ion-thumbnail item-start>
         <img src="img/thumbnail-totoro.png">
       </ion-thumbnail> -->
-      <h2>Tomato</h2>
-      <p>Red Tomatoes • $15</p>
-      <button ion-button clear item-end (click)="openModal({charNum: 0})">View</button>
+      <h2>{{item.Name}}</h2>
+      <p>{{item.Quote}}</p>
+      <button ion-button clear item-end (click)="openModal({charNum: i})">View</button>
     </ion-item>
-    <ion-item>
-      <!-- <ion-thumbnail item-start>
-        <img src="img/thumbnail-totoro.png">
-      </ion-thumbnail> -->
+    <!-- <ion-item>
       <h2>Sweet Pepper</h2>
       <p>Green Sweet Peppers • $10</p>
       <button ion-button clear item-end (click)="openModal({charNum: 1})">View</button>
     </ion-item>
     <ion-item>
-      <!-- <ion-thumbnail item-start>
-        <img src="img/thumbnail-totoro.png">
-      </ion-thumbnail> -->
       <h2>Onion</h2>
       <p>Yellow Onions • $12</p>
       <button ion-button clear item-end (click)="openModal({charNum: 2})">View</button>
-    </ion-item>
+    </ion-item> -->
   </ion-list>
 
 </ion-content>

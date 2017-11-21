@@ -1,0 +1,23 @@
+[
+  {
+    "Name":"Tomatoes",
+    "Quote":"Tomatoes not Potatoes",
+    "Time":"8:15 pm",
+    "Date":"17-03-2017",
+    "Description":"Now $15 a pound."
+  },
+  {
+    "Name":"Sweet Pepper",
+    "Quote":"Sweetest Pepper ever!",
+    "Time":"9:20 am",
+    "Date":"09-12-2017",
+    "Description":"Now $10 a pound."
+  },
+  {
+    "Name":"Onion",
+    "Quote":"Sour Onion",
+    "Time":"11:00 am",
+    "Date":"11-09-2017",
+    "Description":"Now $12 a pound"
+  }
+]
