@@ -45,5 +45,19 @@
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyC1q1xoaJ61FkyWm2QHgbtFVP-0-ntKyX4",
+      authDomain: "green-market-43cfe.firebaseapp.com",
+      databaseURL: "https://green-market-43cfe.firebaseio.com",
+      projectId: "green-market-43cfe",
+      storageBucket: "green-market-43cfe.appspot.com",
+      messagingSenderId: "597509118435"
+    };
+    firebase.initializeApp(config);
+  </script>
+
 </body>
 </html>

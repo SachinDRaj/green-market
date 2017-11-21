@@ -4,21 +4,47 @@ import { NavController } from 'ionic-angular';
 import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
 // import { ModalContentPage } from 'modalContent';
 
+declare var firebase: any;
+
 @Component({
   selector: 'page-support',
   templateUrl: 'support.html',
 })
 
-
 export class SupportPage {
+  notes = [];
+  constructor(public modalCtrl: ModalController,public navCtrl: NavController) {
 
-  constructor(public modalCtrl: ModalController) {
   }
 
   openModal(characterNum) {
     let modal = this.modalCtrl.create(ModalContentPage, characterNum);
     modal.present();
   }
+
+  // writeUserData(userId, name, email, imageUrl) {
+  //   firebase.database().ref('users/' + userId).set({
+  //     username: name,
+  //     email: email,
+  //     profile_picture : imageUrl
+  //   });
+  // }
+  ngOnInit(){
+    this.fbGetData();
+  }
+
+  fbGetData(){
+    firebase.database().ref('/').on('child_added',(snapshot) => {
+      this.notes.push(snapshot.val())
+      // console.log(snapshot)
+      console.log(this.notes)
+    })
+  }
+
+  fbPostData(notes,item){
+    firebase.database().ref('/').push({name: name, belt: belt});
+  }
+
 }
 
 @Component({
@@ -71,3 +97,4 @@ export class ModalContentPage {
     this.viewCtrl.dismiss();
   }
 }
+

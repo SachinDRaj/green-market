@@ -2,5 +2,7 @@
   "name": "green-market",
   "app_id": "05973739",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
