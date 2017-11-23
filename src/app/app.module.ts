@@ -11,7 +11,7 @@ import { AboutPage } from '../pages/about/about';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SupportPage } from '../pages/support/support';
 import { ModalContentPage } from '../pages/support/support';
-
+import { ReversePipe } from '../app/pipes/ReversePipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { ModalContentPage } from '../pages/support/support';
     AboutPage,
     TabsPage,
     SupportPage,
+    ReversePipe,
     ModalContentPage
   ],
   imports: [
