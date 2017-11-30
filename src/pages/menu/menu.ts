@@ -48,7 +48,8 @@ export class MenuPage {
     let childNav = this.nav.getActiveChildNav();
     // console.log(childNav);
     if (childNav){
-      if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+      if (childNav.getSelected() && childNav.getSelected().index === page.index) {
+        console.log("hello");
         return 'primary';
       }
       return;

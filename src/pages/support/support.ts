@@ -18,6 +18,7 @@ var notes = [];
 export class SupportPage {
   items = [];
   constructor(public modalCtrl: ModalController,public navCtrl: NavController) {
+    notes=[];
     this.fbGetData();
   }
 
@@ -27,9 +28,7 @@ export class SupportPage {
   }
 
 
-  // ngOnInit(){
-  //
-  // }
+
 
   fbGetData(){
     firebase.database().ref('/').on('child_added',(snapshot) => {

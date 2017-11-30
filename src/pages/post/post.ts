@@ -18,6 +18,11 @@ export class PostPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  todo = {}
+  logForm() {
+    console.log(this.todo)
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad PostPage');
   }
