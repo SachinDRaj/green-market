@@ -7,20 +7,24 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { AboutPage } from '../pages/about/about';
-import { TabsPage } from '../pages/tabs/tabs';
+// import { AboutPage } from '../pages/about/about';
+// import { TabsPage } from '../pages/tabs/tabs';
 import { SupportPage } from '../pages/support/support';
 import { ModalContentPage } from '../pages/support/support';
 import { ReversePipe } from '../app/pipes/ReversePipe';
+// import { PostPage } from '../pages/post/post';
+import { MenuPage } from '../pages/menu/menu';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    AboutPage,
-    TabsPage,
+    // AboutPage,
+    MenuPage,
+    // TabsPage,
     SupportPage,
     ReversePipe,
+    // PostPage,
     ModalContentPage
   ],
   imports: [
@@ -30,9 +34,11 @@ import { ReversePipe } from '../app/pipes/ReversePipe';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    MenuPage,
     HomePage,
-    AboutPage,
-    TabsPage,
+    // AboutPage,
+    // PostPage,
+    // TabsPage,
     SupportPage,
     ModalContentPage
   ],

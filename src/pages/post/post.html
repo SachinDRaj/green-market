@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Post</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <div class="panel-body p3">
+      <form role="form">
+        <br style="clear:both">
+  			<div class="form-group">
+
+          <h4>Title:</h4>
+
+
+  				<input type="text" class="form-control" id="h1" name="header" placeholder="Title" required>
+
+  			</div>
+  			<div class="form-group">
+          <hr>
+          <h4>Subject:</h4>
+  				<input type="text" class="form-control" id="h2" name="subheader" placeholder="Subject" required>
+        </div>
+  			<div class="form-group">
+          <hr>
+          <h4>Date/Time:</h4>
+          <div class='input-group date' id='datetimepicker1'>
+              <input type='text' class="form-control" id="dateTime"/>
+              <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+          </div>
+  			</div>
+        <div class="form-group">
+          <hr>
+          <h4>Message:</h4>
+        <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+        </div>
+          <button type="button" id="submit" name="submit" class="btn btn-primary btn-block" onclick="postData()">Post</button>
+      </form>
+
+    </div>
+
+</ion-content>

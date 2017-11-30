@@ -7,6 +7,7 @@ import { ModalController, Platform, NavParams, ViewController } from 'ionic-angu
 declare var firebase: any;
 var notes = [];
 
+@IonicPage()
 @Component({
   selector: 'page-support',
   templateUrl: 'support.html'
@@ -17,7 +18,7 @@ var notes = [];
 export class SupportPage {
   items = [];
   constructor(public modalCtrl: ModalController,public navCtrl: NavController) {
-
+    this.fbGetData();
   }
 
   openModal(characterNum) {
@@ -26,9 +27,9 @@ export class SupportPage {
   }
 
 
-  ngOnInit(){
-    this.fbGetData();
-  }
+  // ngOnInit(){
+  //
+  // }
 
   fbGetData(){
     firebase.database().ref('/').on('child_added',(snapshot) => {
