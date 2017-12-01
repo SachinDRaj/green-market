@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-// declare var firebase: any;
+declare var firebase: any;
 
 @IonicPage()
 @Component({
@@ -13,8 +13,12 @@ export class PostPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  todo = {}
-  date;
+  todo = {
+    description:'',
+    title:'',
+    subject:''
+  }
+
   date = new Date();
   // myDate: String = new Date().toISOString();
 
