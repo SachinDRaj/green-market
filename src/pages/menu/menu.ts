@@ -23,11 +23,27 @@ export class MenuPage {
   pages: PageInterface[] = [
     {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
     {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
+    {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'md-flower'},
     {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
-    {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
+    // {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
   ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.loggedIn();
+  }
+
+  loggedIn(){
+    let p = 0;
+    if (p===0){
+      this.pages =[
+        {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
+        {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
+        {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'md-flower'},
+        {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
+        {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
+      ]
+
+    }
   }
 
   openPage(page: PageInterface){
@@ -36,20 +52,20 @@ export class MenuPage {
     if(page.index){
       params = {tabIndex: page.index};
     }
-
-    if(this.nav.getActiveChildNav() && page.index !=undefined) {
-      this.nav.getActiveChildNav().select(page.index);
+    let items = this.nav.getActiveChildNavs();
+    if(items[0] && page.index !=undefined) {
+      items[0].select(page.index);
+      // this.nav.getActiveChildNav().select(page.index);
     }else {
       this.nav.setRoot(page.pageName, params);
     }
   }
 
   isActive(page: PageInterface){
-    let childNav = this.nav.getActiveChildNav();
+    let childNav = this.nav.getActiveChildNavs();
     // console.log(childNav);
-    if (childNav){
-      if (childNav.getSelected() && childNav.getSelected().index === page.index) {
-        console.log("hello");
+    if (childNav[0]){
+      if (childNav[0].getSelected() && childNav[0].getSelected().index === page.index) {
         return 'primary';
       }
       return;

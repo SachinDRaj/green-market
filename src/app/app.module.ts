@@ -14,6 +14,7 @@ import { ModalContentPage } from '../pages/support/support';
 import { ReversePipe } from '../app/pipes/ReversePipe';
 // import { PostPage } from '../pages/post/post';
 import { MenuPage } from '../pages/menu/menu';
+import { GardenPage } from '../pages/garden/garden';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MenuPage } from '../pages/menu/menu';
     HomePage,
     // AboutPage,
     MenuPage,
+    GardenPage,
     // TabsPage,
     SupportPage,
     ReversePipe,
@@ -36,6 +38,7 @@ import { MenuPage } from '../pages/menu/menu';
     MyApp,
     MenuPage,
     HomePage,
+    GardenPage,
     // AboutPage,
     // PostPage,
     // TabsPage,
