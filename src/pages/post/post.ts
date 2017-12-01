@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 declare var firebase: any;
 
@@ -10,7 +11,7 @@ declare var firebase: any;
 })
 export class PostPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController) {
   }
 
   todo = {
@@ -59,6 +60,12 @@ export class PostPage {
     //   Quote: this.todo.subject,
     //   Time: nTime
     // });
+
+    let toast = this.toastCtrl.create({
+      message: 'Notification Posted',
+      duration: 3000
+    });
+    toast.present();
 
   }
 

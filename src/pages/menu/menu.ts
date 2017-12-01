@@ -23,7 +23,7 @@ export class MenuPage {
   pages: PageInterface[] = [
     {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
     {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
-    {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'md-flower'},
+    {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'ios-flower'},
     {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
     {title: 'Login', pageName: 'LoginPage', icon: 'ios-lock'},
     // {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
@@ -39,7 +39,7 @@ export class MenuPage {
       this.pages =[
         {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
         {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
-        {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'md-flower'},
+        {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'ios-flower'},
         {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
         {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
         {title: 'Login', pageName: 'LoginPage', icon: 'ios-lock'},

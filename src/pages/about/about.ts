@@ -12,8 +12,8 @@ export class AboutPage {
 
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AboutPage');
-  }
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad AboutPage');
+  // }
 
 }

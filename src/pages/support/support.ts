@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular';
 
 import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
 // import { ReversePipe } from '../app/pipes/ReversePipe';
@@ -17,9 +18,17 @@ var notes = [];
 
 export class SupportPage {
   items = [];
-  constructor(public modalCtrl: ModalController,public navCtrl: NavController) {
+  constructor(public modalCtrl: ModalController,public navCtrl: NavController,public loadingCtrl: LoadingController) {
     notes=[];
     this.fbGetData();
+  }
+
+  ionViewDidLoad(){
+    let loader = this.loadingCtrl.create({
+      content: "Loading Notifications...",
+      duration: 3000
+    });
+    loader.present();
   }
 
   openModal(characterNum) {

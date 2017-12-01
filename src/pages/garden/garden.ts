@@ -54,8 +54,8 @@ export class GardenPage {
     this.activity = timeline[0];
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GardenPage');
-  }
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad GardenPage');
+  // }
 
 }
