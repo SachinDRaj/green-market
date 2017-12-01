@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
 // import { ReversePipe } from '../app/pipes/ReversePipe';
 
-declare var firebase: any;
+// declare var firebase: any;
 var notes = [];
 
 @IonicPage()
