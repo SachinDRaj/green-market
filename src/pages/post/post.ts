@@ -33,12 +33,12 @@ export class PostPage {
     return strTime;
   }
   getDate(date){
-    var day = date.getDay();
-    var month = date.getMonth();
-    var year = date.getYear();
+    var day= date.getDay();
+    var month= date.getMonth();
+    var temp = date.getYear();
     // var temp = year.parseInt()
-    // temp = temp-100+2000;
-    // year = '20' + temp.toString();
+    temp = temp-100+2000;
+    var year = temp.toString();
     var newDate = day+'/'+month+'/'+year;
 
     return newDate;
@@ -49,15 +49,16 @@ export class PostPage {
     // this.date = new Date();
     var nDate = this.getDate(this.date);
     // console.log(this.todo)
-    // console.log(nTime)
-    // console.log(nDate)
-    firebase.database().ref('/').push({
-      Date: nDate,
-      Description: this.todo.description,
-      Name: this.todo.title,
-      Quote: this.todo.subject,
-      Time: nTime
-    });
+    console.log(nTime)
+    console.log(nDate)
+
+    // firebase.database().ref('/').push({
+    //   Date: nDate,
+    //   Description: this.todo.description,
+    //   Name: this.todo.title,
+    //   Quote: this.todo.subject,
+    //   Time: nTime
+    // });
 
   }
 

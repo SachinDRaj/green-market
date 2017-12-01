@@ -1,13 +1,19 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content class="login-content" padding>
+<ion-content class="login-content" padding no-bounce>
+  <div class="div1">
+    <img class="logo1" src="assets/imgs/gm.png">
+  </div>
   <div class="login-box">
     <form (ngSubmit)="login()" #registerForm="ngForm">
       <ion-row>
@@ -28,10 +34,12 @@
 
       <ion-row>
         <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+          <button ion-button class="submit-btn" full type="submit">Login</button>
         </ion-col>
       </ion-row>
 
     </form>
   </div>
 </ion-content>
+
+<!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button> -->

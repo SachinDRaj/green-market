@@ -25,6 +25,7 @@ export class MenuPage {
     {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
     {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'md-flower'},
     {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
+    {title: 'Login', pageName: 'LoginPage', icon: 'ios-lock'},
     // {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
   ]
 
@@ -41,6 +42,7 @@ export class MenuPage {
         {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'md-flower'},
         {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
         {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
+        {title: 'Login', pageName: 'LoginPage', icon: 'ios-lock'},
       ]
 
     }

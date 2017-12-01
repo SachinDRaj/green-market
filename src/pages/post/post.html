@@ -11,7 +11,7 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding no-bounce>
 
   <form (ngSubmit)="logForm()">
     <ion-item>
@@ -30,7 +30,7 @@
     <ion-label>Date</ion-label>
       <ion-datetime displayFormat="MMM DD, YYYY HH:mm A" name="date"></ion-datetime>
     </ion-item> -->
-    <button ion-button type="submit" block>Submit Post</button>
+    <button ion-button class="submit-btn2" type="submit" block>Submit Post</button>
   </form>
 
 </ion-content>
