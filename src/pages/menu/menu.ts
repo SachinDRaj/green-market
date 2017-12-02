@@ -1,6 +1,8 @@
 import { Component,ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams,Nav } from 'ionic-angular';
 
+declare var firebase: any;
+
 export interface PageInterface {
   title: string;
   pageName: string;
@@ -15,12 +17,13 @@ export interface PageInterface {
   templateUrl: 'menu.html',
 })
 export class MenuPage {
+  ifSignedIn = false;
 
   rootPage = 'TabsPage';
 
   @ViewChild(Nav) nav: Nav;
 
-  pages: PageInterface[] = [
+  public pages: PageInterface[] = [
     {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
     {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
     {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'ios-flower'},
@@ -29,24 +32,44 @@ export class MenuPage {
     // {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
   ]
 
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.loggedIn();
+
+
   }
 
   loggedIn(){
-    let p = 0;
-    if (p===0){
+      this.ifSignedIn = true;
       this.pages =[
         {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
         {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
         {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'ios-flower'},
         {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
         {title: 'Post', pageName: 'PostPage', icon: 'ios-add'},
+      ]
+  }
+
+  signOut(){
+      this.ifSignedIn = false;
+      firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        console.log("sign out")
+        // this.menuPage.signedOut()
+      }).catch(function(error) {
+        console.log("error signing out")
+        // An error happened.
+      });
+
+      this.pages =[
+        {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
+        {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
+        {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'ios-flower'},
+        {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
         {title: 'Login', pageName: 'LoginPage', icon: 'ios-lock'},
       ]
-
-    }
   }
+
 
   openPage(page: PageInterface){
     let params = {};

@@ -53,13 +53,13 @@ export class PostPage {
     console.log(nTime)
     console.log(nDate)
 
-    // firebase.database().ref('/').push({
-    //   Date: nDate,
-    //   Description: this.todo.description,
-    //   Name: this.todo.title,
-    //   Quote: this.todo.subject,
-    //   Time: nTime
-    // });
+    firebase.database().ref('/').push({
+      Date: nDate,
+      Description: this.todo.description,
+      Name: this.todo.title,
+      Quote: this.todo.subject,
+      Time: nTime
+    });
 
     let toast = this.toastCtrl.create({
       message: 'Notification Posted',

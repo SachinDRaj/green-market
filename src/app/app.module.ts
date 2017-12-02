@@ -46,6 +46,7 @@ import { GardenPage } from '../pages/garden/garden';
     ModalContentPage
   ],
   providers: [
+    MenuPage,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
