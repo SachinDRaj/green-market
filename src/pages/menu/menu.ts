@@ -1,5 +1,8 @@
 import { Component,ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams,Nav } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
+import { HomePage } from '../home/home';
+
 
 declare var firebase: any;
 
@@ -34,7 +37,7 @@ export class MenuPage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController) {
 
 
   }
@@ -50,16 +53,28 @@ export class MenuPage {
       ]
   }
 
+
   signOut(){
       this.ifSignedIn = false;
-      firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-        console.log("sign out")
-        // this.menuPage.signedOut()
-      }).catch(function(error) {
+      const promise = firebase.auth().signOut();
+      promise.catch(e => {
+        console.log(e.message)
         console.log("error signing out")
-        // An error happened.
+
       });
+
+      firebase.auth().onAuthStateChanged(firebaseUser => {
+      if (firebaseUser){
+        // this.menuPage.loggedIn()
+        console.log("firebaseUser still here")
+      }else{
+        console.log("Signed out")
+        this.afterSignOut()
+
+        // console.log("sign out error")
+      }
+      });
+
 
       this.pages =[
         {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
@@ -68,6 +83,16 @@ export class MenuPage {
         {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
         {title: 'Login', pageName: 'LoginPage', icon: 'ios-lock'},
       ]
+  }
+
+  afterSignOut(){
+    let toast = this.toastCtrl.create({
+      message: 'Signed Out',
+      duration: 3000
+    });
+    toast.present();
+    // this.navCtrl.setRoot(HomePage)
+
   }
 
 

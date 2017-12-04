@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MenuPage } from '../menu/menu';
 import { HomePage } from '../home/home';
+import { ToastController } from 'ionic-angular';
 
 declare var firebase: any;
 // registerCredentials = [];
@@ -13,7 +14,7 @@ declare var firebase: any;
 
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public menuPage : MenuPage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuPage : MenuPage,public toastCtrl: ToastController) {
   }
 
   registerCredentials = {
@@ -25,29 +26,37 @@ export class LoginPage {
     // const auth = firebase.auth();
 
     const promise = firebase.auth().signInWithEmailAndPassword(this.registerCredentials.email, this.registerCredentials.password);
-    promise.catch(e => console.log(e.message));
+    promise.catch(e => {
+      console.log(e.message)
+      let toast = this.toastCtrl.create({
+        message: 'Incorrect Email or Password.',
+        duration: 3000
+      });
+      toast.present();
 
-    // firebase.auth().onAuthStateChanged(function(user) {
-    //   if (user) {
-    //     this.menuPage.loggedIn()
-    //     // User is signed in.
-    //     console.log("logged in")
-    //   } else {
-    //     // No user is signed in.
-    //   }
-    // });
+    });
+
     firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser){
-      this.menuPage.loggedIn()
       console.log("logged in")
-      this.navCtrl.setRoot(HomePage)
-      // console.log(firebaseUser);
-    }else{
-      // console.log("error logging in")
-      // alert("Incorrect Email or Password");
+      this.afterLogIn()
+
+    }else if(!firebaseUser){
+      // console.log("error logging in.")
     }
     });
 
+  }
+
+  afterLogIn(){
+    this.menuPage.loggedIn()
+    // console.log("logged in")
+    this.navCtrl.setRoot(HomePage)
+    let toast = this.toastCtrl.create({
+      message: 'Logged in as Admin.',
+      duration: 3000
+    });
+    toast.present();
   }
 
 
