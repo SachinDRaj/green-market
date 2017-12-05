@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Camera } from '@ionic-native/camera';
 
 declare var firebase: any;
 
@@ -10,8 +12,30 @@ declare var firebase: any;
   templateUrl: 'post.html',
 })
 export class PostPage {
+  private imageSrc: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController,private imagePicker: ImagePicker) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController) {
+  }
+
+  openGallery(){
+    let cameraOptions = {
+    sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+    destinationType: Camera.DestinationType.FILE_URI,
+    quality: 100,
+    targetWidth: 1000,
+    targetHeight: 1000,
+    encodingType: Camera.EncodingType.JPEG,
+    correctOrientation: true
+  }
+
+  Camera.getPicture(cameraOptions)
+    .then(file_uri => this.imageSrc = file_uri,
+    err => console.log(err));
+    // this.imagePicker.getPictures(options).then((results) => {
+    //   for (var i = 0; i < results.length; i++) {
+    //       console.log('Image URI: ' + results[i]);
+    //   }
+    //   }, (err) => { });
   }
 
   todo = {
