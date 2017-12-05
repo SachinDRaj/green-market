@@ -26,7 +26,7 @@ export class SupportPage {
   ionViewDidLoad(){
     let loader = this.loadingCtrl.create({
       content: "Loading Notifications...",
-      duration: 3000
+      duration: 2000
     });
     loader.present();
   }

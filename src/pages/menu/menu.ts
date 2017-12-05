@@ -1,7 +1,7 @@
 import { Component,ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams,Nav } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
-import { HomePage } from '../home/home';
+// import { HomePage } from '../home/home';
 
 
 declare var firebase: any;

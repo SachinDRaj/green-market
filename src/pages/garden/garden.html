@@ -12,84 +12,29 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content class="bGarden">
 
 
-  <section id="cd-timeline" class="cd-container">
-        <!-- <div *ngFor="#p of activity"> -->
-
-          <!-- <div class="cd-timeline-block">
-          <div class="cd-timeline-picture dark">
-            <img ng-src={{activity.profilePicture}}></img>
-          </div> -->
-          <!-- cd-timeline-img -->
-            <!-- <div class="cd-timeline-content">
-              <h5 class="marginBottom0 marginTop0">{{activity.title}}</h5>
-              <p class="marginTop5 cd-author">by {{activity.author}} on {{activity.date | date: "d MMM"}}</p>
-              <p class="timelineText">{{activity.text}}</p>
-            </div>
-          </div> -->
-
-          <div class="cd-timeline-block">
+  <section id="cd-timeline"  class="cd-container">
+          <div *ngFor="let act of activity" class="cd-timeline-block">
             <div class="cd-timeline-icon">
-              <ion-icon name="md-flower"></ion-icon>
+              <p class="tDate">{{act.date | date: "d MMM"}}</p>
             </div>
-            <!-- <div class="cd-timeline-picture dark">
-              <img src="https://www.lawyersweekly.com.au/images/LW_Media_Library/LW-602-p24-partner-profile.jpg">
-            </div> -->
+              <!-- <img src={{act.profilePicture}}> -->
           <!-- cd-timeline-img -->
             <div class="cd-timeline-content">
-              <h5 class="marginBottom0 marginTop0">Amazing</h5>
-              <p class="marginTop5 cd-author">by John on Dec 5th 2017 </p>
-              <p class="timelineText">Lots of Fun</p>
-            </div>
-          </div>
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-icon">
+              <div class="text-content">
+                <h5 class="marginBottom0 marginTop0">{{act.title}}</h5>
+                <p class="marginTop5 cd-author">by {{act.author}} on {{act.date | date: "d MMM"}}</p>
+                <p class="timelineText">{{act.text}}</p>
 
-            </div>
-          <!-- cd-timeline-img -->
-            <div class="cd-timeline-content">
-              <h5 class="marginBottom0 marginTop0">Amazing</h5>
-              <p class="marginTop5 cd-author">by John on Dec 5th 2017 </p>
-              <p class="timelineText">Lots of Fun</p>
-            </div>
-          </div>
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-icon">
+              </div>
 
-            </div>
-          <!-- cd-timeline-img -->
-            <div class="cd-timeline-content">
-              <h5 class="marginBottom0 marginTop0">Amazing</h5>
-              <p class="marginTop5 cd-author">by John on Dec 5th 2017 </p>
-              <p class="timelineText">Lots of Fun</p>
-            </div>
-          </div>
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-icon">
-
-            </div>
-          <!-- cd-timeline-img -->
-            <div class="cd-timeline-content">
-              <h5 class="marginBottom0 marginTop0">Amazing</h5>
-              <p class="marginTop5 cd-author">by John on Dec 5th 2017 </p>
-              <p class="timelineText">Lots of Fun</p>
-            </div>
-          </div>
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-icon">
-
-            </div>
-          <!-- cd-timeline-img -->
-            <div class="cd-timeline-content">
-              <h5 class="marginBottom0 marginTop0">Amazing</h5>
-              <p class="marginTop5 cd-author">by John on Dec 5th 2017 </p>
-              <p class="timelineText">Lots of Fun</p>
+              <img class="gardenImg" src={{act.profilePicture}} alt="">
             </div>
           </div>
 
-        <!-- </div> -->
+
   </section>
 
 

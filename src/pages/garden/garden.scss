@@ -2,20 +2,41 @@ page-garden {
 
 }
 
+.bGarden{
+  // background-image: url("/assets/imgs/pic2.jpeg");
+  // opacity: 0.9;
+  background-color: #F5FBEF;
+}
 
+.tDate{
+  position: relative;
+  margin-top: -3%;
+  margin-left: 2%;
+}
 /* --------------------------------
 
 Paddings and margins
 
 -------------------------------- */
+.text-content{
+  // box-shadow: 1px 1px 10px 1px;
+  // border: solid grey 1px;
+  margin: 2%;
+  // border-radius: 3px;
+
+}
+
 .marginBottom0 {
   margin-bottom: 0;
+  margin-left: 3%;
+  // padding-left: 5%;
 }
 .marginTop0 {
   margin-top: 0;
 }
 .marginTop5 {
-  margin-top: 5px !important;
+  padding-left: 3%;
+  // margin-top: 5px;
 }
 /* --------------------------------
 
@@ -25,8 +46,9 @@ Modules - reusable parts of our design
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 93%;
-  max-width: 1170px;
-  margin: 0 auto;
+  // max-width: 1170px;
+  // margin: 0 auto;
+  // background-color: #F5FBEF;
 }
 .cd-container::after {
   /* clearfix */
@@ -42,6 +64,7 @@ Main components
 -------------------------------- */
 .timelineText {
   color: black;
+  padding-left: 3%;
 }
 .timelineIcon {
   font-size: 25px;
@@ -51,25 +74,28 @@ Main components
   color:gray;
 }
 #cd-timeline {
+  // background-color: #F5FBEF;
   position: relative;
   margin-top: 2em;
-  margin-bottom: 2em;
-  margin-left: 10px !important;
+  // margin-bottom: 2em;
+  margin-left: 10px
+
 }
 #cd-timeline::before {
   /* this is the vertical line */
   content: '';
   position: absolute;
   top: 0;
-  left: 18px;
+  left: 7.5%;
   height: 100%;
-  width: 4px;
-  background: gray;
+  width: 2px;
+  background: grey;
 }
 
 .cd-timeline-block {
   position: relative;
   margin: 2em 0;
+  // box-shadow: 1px 1px 7px 1px;
 }
 .cd-timeline-block:after {
   content: "";
@@ -87,14 +113,15 @@ Main components
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border-color: #4a87ee;
+  width: 15%;
+  height: 8%;
+  border-radius: 15px;
+  border-color: black;
   border-style: solid;
   border-width: 2px;
   padding-top:5px;
-  background: white;
+  background: #F5FBEF;
+  box-shadow: 0px 0px 1px 1px grey;
 }
 .cd-timeline-icon i {
   color: #4a87ee;
@@ -120,14 +147,16 @@ Main components
 }
 
 .cd-timeline-content {
+  box-shadow: 1px 1px 7px 1px;
   position: relative;
-  margin-left: 60px;
+  margin-left: 20%;
   background: white;
-  border-radius: 0.25em;
-  border-color: #BDDFB3;
+  border-radius: .25em;
+  border-color: black;
   border-style: solid;
   border-width: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
+  padding-bottom: -2px;
 }
 .cd-timeline-content:after {
   content: "";
@@ -159,6 +188,7 @@ Main components
   border: 7px solid transparent;
   border-right: 7px solid white;
   border-right-color: inherit;
+  margin-top: 3%
 }
 
 /*COLORS*/
@@ -227,3 +257,21 @@ Main components
   }
 }
 
+.gardenImg{
+
+  // height: 80%;
+  width: 100%;
+
+  box-shadow: 0px 0px 5px 0px;
+  // margin: auto;
+  margin-bottom: -3px;
+
+}
+
+.gardenIcon{
+  margin: auto;
+}
+
+.endT{
+
+}
