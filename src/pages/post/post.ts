@@ -18,19 +18,19 @@ export class PostPage {
   }
 
   openGallery(){
-    let cameraOptions = {
-    sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-    destinationType: Camera.DestinationType.FILE_URI,
-    quality: 100,
-    targetWidth: 1000,
-    targetHeight: 1000,
-    encodingType: Camera.EncodingType.JPEG,
-    correctOrientation: true
-  }
-
-  Camera.getPicture(cameraOptions)
-    .then(file_uri => this.imageSrc = file_uri,
-    err => console.log(err));
+  //   let cameraOptions = {
+  //   sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+  //   destinationType: Camera.DestinationType.FILE_URI,
+  //   quality: 100,
+  //   targetWidth: 1000,
+  //   targetHeight: 1000,
+  //   encodingType: Camera.EncodingType.JPEG,
+  //   correctOrientation: true
+  // }
+  //
+  // Camera.getPicture(cameraOptions)
+  //   .then(file_uri => this.imageSrc = file_uri,
+  //   err => console.log(err));
     // this.imagePicker.getPictures(options).then((results) => {
     //   for (var i = 0; i < results.length; i++) {
     //       console.log('Image URI: ' + results[i]);

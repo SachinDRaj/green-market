@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 // import { Firebase } from '@ionic-native/firebase';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { Camera } from '@ionic-native/camera';
+// import { Push } from '@ionic-native/push';
+// import { FCM } from '@ionic-native/fcm';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -50,6 +52,8 @@ import { GardenPage } from '../pages/garden/garden';
   providers: [
     MenuPage,
     ImagePicker,
+    // FCM,
+    // Push,
     Camera,
     StatusBar,
     SplashScreen,

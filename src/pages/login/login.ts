@@ -60,28 +60,35 @@ export class LoginPage {
   }
 
 
-  // loginAnonymously(){
-  //   firebase.auth().signInAnonymously().catch(function(error) {
-  //     // Handle Errors here.
-  //     var errorCode = error.code;
-  //     var errorMessage = error.message;
-  //     // ...
-  //   });
-  //
-  //   firebase.auth().onAuthStateChanged(function(user) {
-  //     if (user) {
-  //       console.log("logged in anonymously")
-  //       // User is signed in.
-  //       // var isAnonymous = user.isAnonymous;
-  //       // var uid = user.uid;
-  //       // ...
-  //     } else {
-  //       // User is signed out.
-  //       // ...
-  //     }
-  //     // ...
-  //   });
-  // }
+  loginAnonymously(){
+    firebase.auth().signInAnonymously().catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    });
+
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      if (firebaseUser){
+        console.log("Logged in Anonymously")
+        this.afterLogIn2()
+      }else if(!firebaseUser){
+        // console.log("error logging in.")
+      }
+    });
+      // ...
+  }
+
+  afterLogIn2(){
+    this.menuPage.loggedIn2()
+    // console.log("logged in")
+    this.navCtrl.setRoot(HomePage)
+    let toast = this.toastCtrl.create({
+      message: 'Logged in Anonymously.',
+      duration: 3000
+    });
+    toast.present();
+  }
   // ionViewDidLoad() {
   //   console.log('ionViewDidLoad LoginPage');
   // }

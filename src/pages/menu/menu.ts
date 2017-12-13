@@ -53,6 +53,16 @@ export class MenuPage {
       ]
   }
 
+  loggedIn2(){
+      this.ifSignedIn = true;
+      this.pages =[
+        {title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'home'},
+        {title: 'Notifications', pageName: 'TabsPage', tabComponent: 'SupportPage', index: 1, icon: 'notifications'},
+        {title: 'Garden', pageName: 'TabsPage', tabComponent: 'GardenPage', index: 2, icon: 'ios-flower'},
+        {title: 'About', pageName: 'AboutPage', icon: 'information-circle'},
+      ]
+  }
+
 
   signOut(){
       this.ifSignedIn = false;
