@@ -8,6 +8,7 @@ import { ImagePicker } from '@ionic-native/image-picker';
 import { Camera } from '@ionic-native/camera';
 // import { Push } from '@ionic-native/push';
 // import { FCM } from '@ionic-native/fcm';
+import { AngularFireModule } from 'angularfire2';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -19,6 +20,14 @@ import { ReversePipe } from '../app/pipes/ReversePipe';
 // import { PostPage } from '../pages/post/post';
 import { MenuPage } from '../pages/menu/menu';
 import { GardenPage } from '../pages/garden/garden';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyC1q1xoaJ61FkyWm2QHgbtFVP-0-ntKyX4",
+  authDomain: "green-market-43cfe.firebaseapp.com",
+  databaseURL: "https://green-market-43cfe.firebaseio.com",
+  storageBucket: "green-market-43cfe.appspot.com",
+  messagingSenderId: "597509118435"
+};
 
 @NgModule({
   declarations: [
@@ -35,6 +44,7 @@ import { GardenPage } from '../pages/garden/garden';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
